@@ -1,5 +1,5 @@
 .container {
-  width: 1230px;
+  width: 100%;
   margin: 0 auto; }
 
 * {
@@ -12,15 +12,16 @@
 
 header .header-top {
   padding: 10px 31px;
-  background-color: #00923f;
-  display: flex;
-  justify-content: space-between; }
-  header .header-top__left h2 {
-    font-family: Roboto, sans-serif;
-    color: #ffffff;
-    font-size: 15px;
-    text-transform: uppercase;
-    font-weight: 500; }
+  background-color: #00923f; }
+  header .header-top__left {
+    width: 100%; }
+    header .header-top__left h2 {
+      text-align: center;
+      font-family: Roboto, sans-serif;
+      color: #ffffff;
+      font-size: 15px;
+      text-transform: uppercase;
+      font-weight: 500; }
   header .header-top__right {
     display: flex;
     justify-content: right; }
@@ -54,7 +55,7 @@ header .header-bottom {
   z-index: 100;
   background-color: #fff; }
   header .header-bottom .content {
-    padding: 5px 31px;
+    padding: 5px 15px;
     display: flex;
     justify-content: space-between; }
     header .header-bottom .content .header-bottom__logo {
@@ -64,55 +65,23 @@ header .header-bottom {
         width: 100%;
         height: 100%;
         object-fit: contain; }
+    header .header-bottom .content .icon-right,
+    header .header-bottom .content .icon-left {
+      display: flex;
+      align-items: center; }
+      header .header-bottom .content .icon-right svg,
+      header .header-bottom .content .icon-left svg {
+        fill: rgba(102, 102, 102, 0.85);
+        height: 24px;
+        width: 24px; }
     header .header-bottom .content .header-bottom__menu {
-      float: right;
-      display: flex; }
-      header .header-bottom .content .header-bottom__menu .menu ul.menu_main {
-        display: flex;
-        height: 100%;
-        align-items: center; }
-        header .header-bottom .content .header-bottom__menu .menu ul.menu_main li {
-          position: relative; }
-          header .header-bottom .content .header-bottom__menu .menu ul.menu_main li a {
-            margin: 0 15px;
-            color: #0a0a0a;
-            font-size: 1.1em;
-            font-weight: 500;
-            padding: 15px 0; }
-          header .header-bottom .content .header-bottom__menu .menu ul.menu_main li .sub {
-            position: absolute;
-            min-width: 260px;
-            padding: 20px 0;
-            visibility: hidden;
-            background-color: #fff;
-            box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.15);
-            top: 30px; }
-            header .header-bottom .content .header-bottom__menu .menu ul.menu_main li .sub ul {
-              width: 100%;
-              display: flex;
-              flex-direction: column; }
-              header .header-bottom .content .header-bottom__menu .menu ul.menu_main li .sub ul li {
-                display: block;
-                width: 100%;
-                padding: 7px 0;
-                transition: transform .3s; }
-                header .header-bottom .content .header-bottom__menu .menu ul.menu_main li .sub ul li a {
-                  font-size: 1em;
-                  line-height: 1.6;
-                  color: #777; }
-                header .header-bottom .content .header-bottom__menu .menu ul.menu_main li .sub ul li:hover {
-                  background-color: rgba(0, 0, 0, 0.03);
-                  transform: translateX(5px);
-                  transition: transform .3s; }
-                  header .header-bottom .content .header-bottom__menu .menu ul.menu_main li .sub ul li:hover a {
-                    color: #00923f; }
-          header .header-bottom .content .header-bottom__menu .menu ul.menu_main li.active .sub, header .header-bottom .content .header-bottom__menu .menu ul.menu_main li:hover .sub {
-            visibility: visible; }
-          header .header-bottom .content .header-bottom__menu .menu ul.menu_main li.active a, header .header-bottom .content .header-bottom__menu .menu ul.menu_main li:hover a {
-            color: #00923f; }
-            header .header-bottom .content .header-bottom__menu .menu ul.menu_main li.active a svg, header .header-bottom .content .header-bottom__menu .menu ul.menu_main li:hover a svg {
-              fill: #00923f;
-              transition: all .3s; }
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 50%;
+      background-color: #fff;
+      z-index: 999; }
     header .header-bottom .content .header-bottom__hotline {
       float: right;
       margin-left: 30px;
@@ -248,15 +217,15 @@ header .header-bottom {
       font-style: normal; }
     .section-intro__box .logo.item {
       flex: 0 0 50%;
-      padding: 0 15px; }
+      padding: 0 15px;
+      padding-top: 60px; }
       .section-intro__box .logo.item img {
         width: 100%; }
     .section-intro__box .text.item {
       padding: 0 15px;
-      padding-top: 60px;
       flex: 0 0 50%; }
       .section-intro__box .text.item .desc {
-        line-height: 1.6;
+        line-height: 1.3;
         margin-bottom: 20px; }
       .section-intro__box .text.item a {
         cursor: pointer;
@@ -433,7 +402,7 @@ header .header-bottom {
     z-index: 1;
     position: relative; }
   .section-project__left {
-    padding-right: 5px;
+    padding: 0 15px;
     max-width: 25%; }
     .section-project__left h2 {
       color: #fff;
@@ -444,13 +413,14 @@ header .header-bottom {
       color: #c0c0c0;
       font-size: 15px;
       line-height: 1.6;
-      margin-bottom: 20px; }
+      margin-bottom: 20px;
+      text-align: justify; }
     .section-project__left a {
       cursor: pointer;
       background-color: #00923f;
       border: none;
       outline: none;
-      padding: 10px 22px;
+      padding: 10px 15px;
       color: #fff;
       border-radius: 99px;
       display: flex;
@@ -464,7 +434,7 @@ header .header-bottom {
         right: 0;
         top: 50%;
         transform: translateY(-50%);
-        right: 8%;
+        right: 5%;
         fill: #fff;
         opacity: 0;
         transition: opacity .3s; }
@@ -731,7 +701,8 @@ header .header-bottom {
           margin-left: 10px;
           font-size: 18px; }
         .section-question__content .item .question svg {
-          transition: all .3s; }
+          transition: all .3s;
+          fill: rgba(102, 102, 102, 0.85); }
         .section-question__content .item .question:hover {
           color: red; }
           .section-question__content .item .question:hover svg {
@@ -852,4 +823,4 @@ footer {
       color: #fff;
       font-size: 15px; }
 
-/*# sourceMappingURL=style.min.css.map */
+/*# sourceMappingURL=mobile.css.map */

@@ -1,4 +1,4 @@
-@extends('web/layout/layout')
+@extends('mobile/layout/layout')
 @section('content')
 <section>
     <div class="container-flush">
